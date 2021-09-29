@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -21,7 +22,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Farmer {
 @Id
-@GeneratedValue
+@GeneratedValue(strategy = GenerationType.IDENTITY)
 private int farmerId;
 private String password;
 private String farmerName;
@@ -32,15 +33,18 @@ private String landAddress;
 private String email;
 private String landSize;
 private String gender;
-@OneToMany(mappedBy = "farmerorder")
+@OneToMany(mappedBy = "farmerOrder")
 private List<Orders> orderList=new ArrayList<>();
-@OneToMany(mappedBy = "farmercart")
+@OneToMany(mappedBy = "farmerCart")
 private List<Cart> cartList=new ArrayList<>();
-@OneToMany(mappedBy = "farmerquery")
+@OneToMany(mappedBy = "farmerQuery")
 private List<Queries> queryList=new ArrayList<>();
 
 public int getId() {
 	return farmerId;
+}
+public String getEmail() {
+	return email;
 }
 public String getPassword() {
 	return password;

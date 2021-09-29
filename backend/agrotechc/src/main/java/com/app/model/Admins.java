@@ -12,17 +12,20 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name="information")
+@Table(name="Users")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Information {
-private String links;
+public class Admins {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int id;
-private String link;
-//private String summary;
-//private String imageLink;
-//private String videoLink;
-//private String references;
+private String adminId ; //email for farmer , alphanumeric id for admin
+private String password;
+
+public String getId() {
+	return adminId;
+}
+public String getPassword() {
+	return password;
+}
 }

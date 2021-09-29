@@ -1,9 +1,12 @@
 package com.app.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.app.model.Cart;
+import com.app.model.Farmer;
 import com.app.repository.CartRepository;
 import com.app.service.CartCrudServices;
 
@@ -20,15 +23,21 @@ public class CartCrudServicesImpl implements CartCrudServices{
 	}
 
 	@Override
-	public Cart getCartInfo(int id) {
+	public Cart getCartInfo(int cartid) {
 		// TODO Auto-generated method stub
-		return repository.findById(id).get();
+		return repository.findById(cartid).get();
 	}
 
 	@Override
-	public void deleteCartItem(int id) {
+	public void deleteCartItem(int cartid) {
 		// TODO Auto-generated method stub
-		repository.deleteById(id);
+		repository.deleteById(cartid);
+	}
+
+	@Override
+	public List<Cart> getMyCart(Farmer f) {
+		// TODO Auto-generated method stub
+		return repository.findByFarmerCart(f);
 	}
 
 }
