@@ -11,11 +11,9 @@ AgroTech is a Agriculture/Farming based Product that allows user to register as 
 * View Products
 * Add Products
 * Adding Information on how to farm to get max output(dairy,paddy,wheat)
-* Updating Information on how to farm to get max output(dairy,paddy,wheat)
-* Add New Companies
-* Delete Old Companies
 * View Order status
 * View all farmers using various search filters
+* Answering Queries
 
 ## As a Farmer i can:
 * Login
@@ -24,8 +22,9 @@ AgroTech is a Agriculture/Farming based Product that allows user to register as 
 * Delete the farmer account
 * View products list
 * Add Product to cart(Buy products:seeds/fertilizers etc)
+* Add Products to Order Table
 * View Order status
-* Posting quiries publicaly
+* Posting Quiries publicaly
 * View and learn Information on how to farm to get max output(dairy,paddy,wheat)
 * Sell his crops to Company of his choice
 
