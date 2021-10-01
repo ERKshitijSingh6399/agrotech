@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Orders {
 @Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+@GeneratedValue(strategy = GenerationType.AUTO)
 private int ordersId;
 private String ordersStatus;
 @ManyToOne
@@ -28,4 +28,11 @@ private Farmer farmerOrder;
 @ManyToOne
 @JoinColumn(name = "productId")
 private Products productOrder;
+
+public void setFarmerOrder(Farmer f) {
+	this.farmerOrder = f;
+}
+public void setProductOrder(Products p) {
+	this.productOrder = p;
+}
 }

@@ -16,13 +16,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Information {
-private String links;
 @Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+@GeneratedValue(strategy = GenerationType.AUTO)
 private int id;
+private String cropName;
+private String cropContent;
+private String cropImage;
 private String link;
-//private String summary;
-//private String imageLink;
-//private String videoLink;
-//private String references;
 }

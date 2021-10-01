@@ -17,12 +17,12 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name="farmer")
+@Table(name="farmer")//, indexes= {@Index(name="IDX_UNIQUE",columnList="landAddress", unique=true)})
 @NoArgsConstructor
 @AllArgsConstructor
 public class Farmer {
 @Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+@GeneratedValue(strategy = GenerationType.AUTO)
 private int farmerId;
 private String password;
 private String farmerName;

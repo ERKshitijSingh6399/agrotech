@@ -1,5 +1,9 @@
 package com.app.service.impl;
 
+import java.util.List;
+
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +12,7 @@ import com.app.repository.CompaniesRepository;
 import com.app.service.CompaniesCrudServices;
 
 @Service
+@Transactional
 public class CompaniesCrudServicesImpl implements CompaniesCrudServices{
 
 	@Autowired
@@ -26,9 +31,9 @@ public class CompaniesCrudServicesImpl implements CompaniesCrudServices{
 	}
 
 	@Override
-	public Companies getAllCompanyDemandItems(int companyid) {
+	public List<Companies> getAllCompanyDemandItems() {
 		// TODO Auto-generated method stub
-		return repository.findById(companyid).get();
+		return repository.findAll();
 	}
 
 	@Override
