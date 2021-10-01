@@ -1,0 +1,29 @@
+.div-flex{
+    margin:2rem;
+    display: flex;
+    justify-content: center;
+}
+.img{
+    padding:1rem;
+    border-radius: 0.5rem;
+    width: 350px;
+    height: 300px;
+    margin-right:2rem;
+}
+.link{
+    padding:0.5rem 1rem;
+    color:white;
+    background-color: #6ea53b;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+.div-grid{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin:auto;
+    width:70%;   
+}
+.content{
+    margin-top: 2rem;
+}

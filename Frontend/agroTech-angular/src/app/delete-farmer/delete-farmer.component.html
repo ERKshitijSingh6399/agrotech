@@ -1,0 +1,23 @@
+
+<!-- <div class="container-fluid">
+  <h3>Do you really want to delete your account</h3>
+  <label>Student Id</label>
+  <input class="form-control" type="text" [(ngModel)]="id" placeholder="Enter farmer id">
+  <br> 
+  <button class="btn btn-danger" type="button" (click)="deleteFarmer()">Delete Farmer</button>
+  <br> <br> 
+</div> -->
+
+<div class="wrapper fadeInDown">
+  
+  <div id="formContent">
+    <h2 class="active" routerLink="/register"> Delete Farmer </h2>
+    <form>
+      <input type="text" [(ngModel)]="farmer.farmerId"  name="productName" placeholder="Enter Farmer Id">
+
+
+      <br>
+      <button class="btn btn-danger" type="button" (click)="deleteFarmer()">Delete Farmer</button>
+    </form>
+  </div>
+</div>

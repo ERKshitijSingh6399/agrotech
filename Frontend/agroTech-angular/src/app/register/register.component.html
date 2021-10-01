@@ -1,0 +1,26 @@
+
+<div class="wrapper fadeInDown">
+  
+    <div id="formContent">
+      <h2 class="inactive" routerLink="/login"> Login </h2>
+      <h2 class="active" routerLink="/register"> Register </h2>
+      <form>
+        <input type="text" [(ngModel)]="farmer.farmerName"  name="name" placeholder="Enter your Name">
+        <input type="text" [(ngModel)]="farmer.email"  name="email" placeholder="Enter Email" required>
+        <input type="text" [(ngModel)]="farmer.contactNumber" name="contactNumber" placeholder="Enter Mobile Number" required>
+        <input type="text" [(ngModel)]="farmer.age" name="age" placeholder="Enter Age">
+        
+          <select class="form-control" type="text" [(ngModel)]="farmer.gender" name="gender" placeholder="Select Gender"
+              >
+            
+            <option>MALE</option>
+            <option>FEMALE</option>
+          </select>
+        
+        <input type="password" [(ngModel)]="farmer.password" name="password" placeholder="Enter Password" required>
+        <br>
+        <button class="btn btn-primary" type="button" (click)="registerFarmer()">Register </button>
+      </form>
+  
+    </div>
+  </div>

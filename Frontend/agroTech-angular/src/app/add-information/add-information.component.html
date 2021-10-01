@@ -1,0 +1,16 @@
+<div class="wrapper fadeInDown">
+  
+    <div id="formContent">
+      <h2 class="active" > Add Information </h2>
+      <form>
+        <input type="text" [(ngModel)]="information.cropName"  name="name" placeholder="Enter crop Name">
+        <input type="text" [(ngModel)]="information.cropContent"  name="content" placeholder="Enter Content" >
+        <input type="text" [(ngModel)]="information.cropImage" name="cropImage" placeholder="Enter Image URL">
+        <input type="text" [(ngModel)]="information.link" name="link" placeholder="Enter link">
+
+        <br>
+        <button class="btn btn-primary" type="button" (click)="addInformation()">Add Information </button>
+      </form>
+    </div>
+  </div>
+

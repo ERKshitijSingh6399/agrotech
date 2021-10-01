@@ -1,0 +1,48 @@
+<!-- <div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 class="active"> Login </h2>
+    <h2 class="inactive underlineHover" routerLink="/register"> Register </h2>
+    <form>
+      <input type="email" [(ngModel)]="farmer.email" id="login"  name="login" placeholder="email">
+      <input type="password" [(ngModel)]="farmer.password" id="password" name="login" placeholder="password">
+      <button class="btn btn-primary" type="button" (click)="checklogincredentials()">Login</button>
+    </form>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet> -->
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 class="active" routerLink="/login"> Login </h2>
+    <h2 class="inactive underlineHover" routerLink="/register"> Register </h2>
+   
+    <form #loginform="ngForm" (ngSubmit)="loginFarmer()">
+      <small class="text-danger" *ngIf="flag">{{msg}}</small>
+      <div class="form-group">
+        <label for="email">Enter Email</label>
+        <input id="email" class="form-control" type="email" name="email" [(ngModel)]="farmer.email" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" #email = "ngModel" 
+        [class.is-invalid]="email.invalid && email.touched"
+        >
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
+          <small *ngIf="email.errors.required">Email Id is required Field</small>
+          <small *ngIf="email.errors.pattern">Enter Valid email Id</small>        
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Enter Password</label>
+        <input id="password" class="form-control" type="password" name="password" [(ngModel)]="farmer.password" required #password = "ngModel" [class.is-invalid]="password.invalid && password.touched">
+        <div *ngIf="password.errors && (password.invalid && password.touched)">
+          <small *ngIf="password.errors.required">password Id is required Field</small>
+          <small *ngIf="password.errors.pattern">Enter Valid password</small>        
+        </div>
+      </div>
+      <button type="submit" class="btn btn-info">Login</button>
+    </form>
+  </div>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

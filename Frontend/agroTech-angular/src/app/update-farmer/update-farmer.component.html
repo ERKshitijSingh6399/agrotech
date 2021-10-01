@@ -1,0 +1,69 @@
+<!-- 
+<div class="wrapper fadeInDown">
+<h3>Update your details</h3>
+
+<form>
+    <h5>Name</h5>
+    <input type="text" [(ngModel)]="farmer.farmerName" class="fadeIn second" name="name" placeholder="Enter your Name">
+    <h5>Email</h5>
+    <input type="text" [(ngModel)]="farmer.email" class="fadeIn second" name="email" placeholder="Enter Email" required>
+    <h5>Mobile Number</h5>
+    <input type="text" [(ngModel)]="farmer.contactNumber" class="fadeIn second" name="contactNumber" placeholder="Enter Mobile Number">
+    <h5>Age</h5>
+    <input type="text" [(ngModel)]="farmer.age" class="fadeIn second" name="age" placeholder="Enter Age">
+    <h5>Gender</h5>
+    <input type="text" [(ngModel)]="farmer.gender" class="fadeIn second" name="gender" placeholder="Enter Gender">
+    <h5>Password</h5>
+    <input type="password" [(ngModel)]="farmer.password" class="fadeIn second" name="password" placeholder="Enter Password">
+    
+    <br>
+    <button class="btn btn-primary" type="button" (click)="updateFarmer()">Update Account</button>
+  </form>
+</div> -->
+
+
+<div class=" text-center wrapper fadeInDown">
+  <h4 class="text-center">Update your Account Details</h4>
+
+  <form >
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Id</label>
+      <input type="text" [(ngModel)]="farmer.farmerId" name="farmerId"  class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Id" 
+        >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Name</label>
+      <input type="text" [(ngModel)]="farmer.farmerName" name="farmerName"  class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Name"
+        >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input type="email" [(ngModel)]="farmer.email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email Id"
+        >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Mobile Number</label>
+      <input type="number" [(ngModel)]="farmer.contactNumber" class="form-control" id="exampleFormControlInput1" placeholder="Enter Contact Number"
+        >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Enter Age </label>
+      <input type="number" [(ngModel)]="farmer.age" class="form-control" id="exampleFormControlInput1" placeholder="Enter Age"
+       >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Example select</label>
+      <select class="form-control" id="exampleFormControlSelect1" placeholder="Select Gender"
+          [(ngModel)]="farmer.gender">
+        <option>FEMALE</option>
+        <option>MALE</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Password</label>
+      <textarea class="form-control"  [(ngModel)]="farmer.password" id="exampleFormControlTextarea1"  placeholder="Enter Password" rows="1"></textarea>
+    </div>
+   
+  <button type="submit" class="btn btn-primary" style="margin-top: 1rem;" (click)="updateFarmer()">Submit</button>
+  </form>
+</div>

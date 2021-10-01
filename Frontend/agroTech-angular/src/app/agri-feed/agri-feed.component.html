@@ -1,0 +1,121 @@
+<!-- <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Chat app</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+        aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+        </div>
+    </nav>
+</header>
+<main class="chat">
+    <div class="container">
+        <div class="chat-content">
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                 <li class="list-group-item" *ngFor="let chatMessage of webSocketService.chatMessages">
+                                <strong>{{chatMessage.user}}: </strong>
+                                <span>{{chatMessage.message}}</span>
+                            </li> 
+                    <li class="list-group-item">
+                    <strong>John: </strong>
+                    <span>hello</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form (ngSubmit)="sendMessage(sendForm)" #sendForm="ngForm">
+            <div class="chat-send row">
+                <div class="col-2">
+                    <input type="text" class="form-control" name="user" id="input-user" ngModel>
+                </div>
+                <div class="col-8">
+                    <input type="text" class="form-control" name="message" id="input-message" ngModel>
+                </div>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main> -->
+
+
+
+<!-- <div class="chat">
+    <div class="div-chat">
+        <div class="chat-grid">
+            <div class="chat-context-expert">
+                <p class="expert-name">expert name <span>17:58</span></p>
+                <p class="expert-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab odio quam eaque tempora suscipit officiis iure vitae reprehenderit odit itaque.</p>
+            </div>
+            <div class="chat-context-user">
+                <p class="user-name">expert name <span>17:58</span></p>
+                <p class="user-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consectetur nemo aspernatur quidem. Architecto amet iusto mollitia, reprehenderit harum facere.</p>
+            </div>
+            <div class="chat-context-expert">
+                <p class="expert-name">expert name <span>17:58</span></p>
+                <p class="expert-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab odio quam eaque tempora suscipit officiis iure vitae reprehenderit odit itaque.</p>
+            </div>
+            <div class="chat-context-user">
+                <p class="user-name">expert name <span>17:58</span></p>
+                <p class="user-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consectetur nemo aspernatur quidem. Architecto amet iusto mollitia, reprehenderit harum facere.</p>
+            </div>
+            <div class="chat-context-expert">
+                <p class="expert-name">expert name <span>17:58</span></p>
+                <p class="expert-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab odio quam eaque tempora suscipit officiis iure vitae reprehenderit odit itaque.</p>
+            </div>
+            <div class="chat-context-user">
+                <p class="user-name">expert name <span>17:58</span></p>
+                <p class="user-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consectetur nemo aspernatur quidem. Architecto amet iusto mollitia, reprehenderit harum facere.</p>
+            </div><div class="chat-context-expert">
+                <p class="expert-name">expert name <span>17:58</span></p>
+                <p class="expert-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab odio quam eaque tempora suscipit officiis iure vitae reprehenderit odit itaque.</p>
+            </div>
+            <div class="chat-context-user">
+                <p class="user-name">expert name <span>17:58</span></p>
+                <p class="user-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consectetur nemo aspernatur quidem. Architecto amet iusto mollitia, reprehenderit harum facere.</p>
+            </div>
+        </div>
+
+            <div class="chat-section">
+                    <input type="text" class="chat-input" name="user" >
+                <span>
+                    <button type="submit" class="btn btn-success">Send</button>
+                    </span>
+               </div>
+    </div>
+</div> -->
+
+
+
+
+
+<div class="feed">
+    <div class="post-area">
+        <div class="view-post">
+            <div class="container-fluid">
+                <div class="card" *ngFor="let player of players">
+                    <div class="card-body">
+                        <p class="card-title">date : {{query.dateQuery}}</p>
+                        <p class="card-title">question:{{query.question}}</p>
+                        <p class="card-text">answer: {{query.answer}}</p>
+                        <p class="card-text">Farmer query: {{farmer.farmerName}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Date with Date pipe with formatting : -->
+​
+    </div>
+    <div class="div-send">
+        <form (submit)="addQuery()">
+            <label for="input-query" class="text-center">Enter Query</label>
+            <input type="text" id="input-query" name="input-query" [(ngModel)]="query.question">
+            <button type="submit" class="btn btn-info">POST</button>
+        </form>
+    </div>
+</div>

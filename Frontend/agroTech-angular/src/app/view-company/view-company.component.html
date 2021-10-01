@@ -1,0 +1,32 @@
+<!-- <div class="container" id="company">
+    <div class="card"  >
+        <ng-container *ngFor="let companies of companies">
+        <div class="card-body">
+            <p class="text-center"><img src="{{companies.companyImage}}" alt="companyImage"></p>
+             <p class="card-text"> {{companies.companyImage}}</p>           
+            <p class="text-center card-text">Name: {{companies.companyName}}</p>
+            <p class="text-center card-text">Contact Number: {{companies.companyNumber}}</p>
+            <p class="text-center card-text">Crop : {{companies.cropName}}</p>
+            <p class="text-center card-text">Price: {{companies.cropPrice}}</p>
+        </div>  
+    </ng-container>     
+    </div>
+</div> -->
+
+
+ <div class="container">
+    <div class="row">
+        <ng-container *ngFor="let companies of companies">
+            <div class="card col-md-3">
+                <img src="{{companies.companyImage}}" alt="image">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{companies.companyName}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{companies.companyNumber}}</p>
+                <p><strong>Number :</strong> {{companies.companyNumber}}</p>
+                <p><strong>Crop :</strong> {{companies.cropName}}</p>
+                <p><strong>Price: </strong>{{companies.cropPrice}}</p>
+                
+            </div>
+        </ng-container>
+​
+    </div>
+</div> 

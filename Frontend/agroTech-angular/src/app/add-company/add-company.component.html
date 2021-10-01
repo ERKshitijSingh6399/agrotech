@@ -1,0 +1,16 @@
+<div class="wrapper fadeInDown">
+  
+    <div id="formContent">
+      <h2 class="active" routerLink="/register"> Add Company </h2>
+      <form>
+        <input type="text" [(ngModel)]="companies.companyName"  name="companyName" placeholder="Enter Company Name">
+        <input type="text" [(ngModel)]="companies.companyImage" name="companyImage" placeholder="Enter Company Image">
+        <input type="text" [(ngModel)]="companies.cropName" name="cropName" placeholder="Enter Crop Name">   
+        <input type="text" [(ngModel)]="companies.cropPrice"  name="cropPrice" placeholder="Enter Crop Price" >    
+        <input type="text" [(ngModel)]="companies.companyNumber" name="companyNumber" placeholder="Enter Company Number">
+
+        <br>
+        <button class="btn btn-primary" type="button" (click)="addCompany()">Add Company </button>
+      </form>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<!-- 
+<div class="row">
+  <div class="column">
+      <div class="card">
+          <img class="card-img-top" src="assets\maize-min.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">maize</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="https://precisionagricultu.re/tips-on-best-practice-maize-production/" class="btn btn-success">Learn more..</a>
+          </div>
+        </div>
+     </div>
+     <div class="column">
+       <div class="card">
+         <img class="card-img-top" src="assets\paddy-min.jpg" alt="Card image cap">
+          <div class="card-body">
+             <h5 class="card-title">Paddy</h5>
+             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="https://vikaspedia.in/agriculture/crop-production/tips-for-farmers/tips-for-rice-growers" class="btn btn-success">Learn more..</a>
+          </div>
+        </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <img class="card-img-top" src="assets\sunflower-min.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h5 class="card-title">Sun Flower</h5>
+           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           <a href="https://www.almanac.com/plant/sunflowers" class="btn btn-success">Learn more..</a>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+        <div class="card">
+          <img class="card-img-top" src="assets\wheat-min.jpg" alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title">Wheat</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="https://www.indiaagronet.com/indiaagronet/crop%20info/wheat.htm" class="btn btn-success">Learn more..</a>
+          </div>
+      </div>
+  </div>
+    <div class="column">
+        <div class="card">
+            <img class="card-img-top" src="assets\poultry-min.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Poultry</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="https://www.alltech.com/blog/15-management-tips-better-poultry-performance-potential" class="btn btn-success">Learn more..</a>
+          </div>
+       </div>
+  </div>
+  <div class="column">
+     <div class="card">
+        <img class="card-img-top" src="assets\dairy-min.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Dairy</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="https://extension.psu.edu/8-things-you-need-to-know-before-starting-your-own-dairy-farm" class="btn btn-success">Learn more..</a>
+       </div>
+   </div>
+  </div>
+</div> -->
+
+
+
+
+<div class="container">
+  <div class="row">
+      <ng-container *ngFor="let information of information">
+          <div class="card col-md-3">
+            <p class="text-center"> <img src="{{information.cropImage}}" alt=""></p>
+              <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{information.cropName}}</h5>
+              <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{information.cropContent}}</p>
+             
+              <a href="{{information.link}}" class="btn btn-success">Learn more..</a>
+          </div>
+      </ng-container>
+  </div>
+</div>
+
+

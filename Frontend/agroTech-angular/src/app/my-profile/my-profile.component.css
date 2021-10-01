@@ -1,0 +1,17 @@
+#profile{
+    margin:50px auto;
+}
+.card{
+    width:80%;
+    margin:auto;
+    background-color: #6EE7B7;
+    border: 2px solid #1B5E20;
+}
+.span{
+    font-size: larger;
+    font-weight: bold;
+}
+.cart-text{
+    font-size: larger;
+    font-weight: 500;
+}
